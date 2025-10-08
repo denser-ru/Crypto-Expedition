@@ -4,101 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Викторина 2: Основы блокчейна и Биткойна</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        .quiz-container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #1c2b4d;
-            text-align: center;
-            border-bottom: 2px solid #e1e4e8;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        .question-block {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-        .question-text {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        .options label {
-            display: block;
-            margin-bottom: 12px;
-            padding: 12px;
-            border-radius: 6px;
-            background-color: #f7f7f7;
-            border: 1px solid #eee;
-            cursor: pointer;
-            transition: background-color 0.2s, border-color 0.2s;
-        }
-        .options label:hover {
-            background-color: #e9ecef;
-        }
-        .options input[type="radio"] {
-            margin-right: 10px;
-        }
-        .feedback {
-            margin-top: 10px;
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 0.9em;
-            display: none; /* Скрыто по умолчанию */
-        }
-        .correct-feedback {
-            background-color: #e6ffed;
-            color: #2d6a4f;
-            border-left: 4px solid #52c41a;
-        }
-        .incorrect-feedback {
-            background-color: #fff1f0;
-            color: #a4262c;
-            border-left: 4px solid #ff4d4f;
-        }
-        .submit-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .submit-btn:hover {
-            background-color: #0056b3;
-        }
-        #results {
-            text-align: center;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-top: 30px;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #e9ecef;
-        }
-    </style>
+    <!-- Подключаем общий файл стилей -->
+    <link rel="stylesheet" href="../assets/css/quiz-styles.css">
 </head>
 <body>
 
@@ -172,48 +79,23 @@
     </div>
 
     <script>
-        function checkAnswers() {
-            const correctAnswers = {
-                q1: 'b',
-                q2: 'c',
-                q3: 'b',
-                q4: 'c',
-                q5: 'b'
-            };
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'c',
+            q3: 'b',
+            q4: 'c',
+            q5: 'b'
+        };
 
-            const explanations = {
-                q1: 'Верно. Каждый блок содержит хэш (уникальный "отпечаток") предыдущего. Изменение старого блока изменит его хэш, что вызовет несоответствие со всей последующей цепочкой, и сеть отвергнет такое изменение.',
-                q2: 'Верно. Это теоретическая атака, при которой злоумышленник, контролирующий более половины мощности сети, может помешать подтверждению транзакций или проводить двойные траты.',
-                q3: 'Верно. Система псевдонимна. Все транзакции и адреса кошельков видны всем, но они не привязаны напрямую к реальным личностям. Однако при желании личность можно попытаться отследить.',
-                q4: 'Верно. Эмиссия Биткойна ограничена 21 миллионом монет, и скорость их создания уменьшается вдвое примерно каждые 4 года (халвинг). Ограниченное предложение создает дефляционное давление.',
-                q5: 'Верно. Это ключевая идея. Фиат требует доверия к централизованным институтам, а Биткойн заменяет это доверие математической достоверностью, прозрачностью кода и децентрализацией сети.'
-            };
-
-            let score = 0;
-            const totalQuestions = Object.keys(correctAnswers).length;
-            const form = document.getElementById('quizForm');
-
-            for (const question in correctAnswers) {
-                const selectedOption = form.elements[question].value;
-                const feedbackEl = document.getElementById('feedback-' + question);
-                
-                feedbackEl.style.display = 'block';
-
-                if (selectedOption === correctAnswers[question]) {
-                    score++;
-                    feedbackEl.textContent = explanations[question];
-                    feedbackEl.className = 'feedback correct-feedback';
-                } else {
-                    feedbackEl.textContent = 'Неверно. ' + explanations[question];
-                    feedbackEl.className = 'feedback incorrect-feedback';
-                }
-            }
-
-            const resultsEl = document.getElementById('results');
-            resultsEl.style.display = 'block';
-            resultsEl.textContent = `Ваш результат: ${score} из ${totalQuestions} правильных ответов.`;
-        }
+        const explanations = {
+            q1: 'Верно. Каждый блок содержит хэш (уникальный "отпечаток") предыдущего. Изменение старого блока изменит его хэш, что вызовет несоответствие со всей последующей цепочкой, и сеть отвергнет такое изменение.',
+            q2: 'Верно. Это теоретическая атака, при которой злоумышленник, контролирующий более половины мощности сети, может помешать подтверждению транзакций или проводить двойные траты.',
+            q3: 'Верно. Система псевдонимна. Все транзакции и адреса кошельков видны всем, но они не привязаны напрямую к реальным личностям. Однако при желании личность можно попытаться отследить.',
+            q4: 'Верно. Эмиссия Биткойна ограничена 21 миллионом монет, и скорость их создания уменьшается вдвое примерно каждые 4 года (халвинг). Ограниченное предложение создает дефляционное давление.',
+            q5: 'Верно. Это ключевая идея. Фиат требует доверия к централизованным институтам, а Биткойн заменяет это доверие математической достоверностью, прозрачностью кода и децентрализацией сети.'
+        };
     </script>
-
+    <!-- Подключаем общий файл скрипта -->
+    <script src="../assets/js/quiz-script.js"></script>
 </body>
 </html>

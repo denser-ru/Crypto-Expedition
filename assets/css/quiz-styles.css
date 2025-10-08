@@ -1,0 +1,93 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+.quiz-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #1c2b4d;
+    text-align: center;
+    border-bottom: 2px solid #e1e4e8;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.question-block {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.question-text {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+.options label {
+    display: block;
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.options label:hover {
+    background-color: #e9ecef;
+}
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+.feedback {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    display: none;
+}
+.correct-feedback {
+    background-color: #e6ffed;
+    color: #2d6a4f;
+    border-left: 4px solid #52c41a;
+}
+.incorrect-feedback {
+    background-color: #fff1f0;
+    color: #a4262c;
+    border-left: 4px solid #ff4d4f;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+#results {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e9ecef;
+}

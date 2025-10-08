@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина 2: Криптокошелёк</title>
+    <!-- Подключаем общий файл стилей -->
+    <link rel="stylesheet" href="../assets/css/quiz-styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Итоговая викторина к Лекции 2: Криптокошелёк</h1>
+
+        <form id="quizForm">
+            <!-- Вопрос 1 -->
+            <div class="question-block" id="q1">
+                <p class="question-text">1. Где на самом деле хранятся ваши криптовалюты (например, биткойны)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> а) В файле на вашем компьютере или телефоне.</label>
+                    <label><input type="radio" name="q1" value="b"> б) Внутри вашего криптокошелька.</label>
+                    <label><input type="radio" name="q1" value="c"> в) В виде записей в глобальной бухгалтерской книге — блокчейне.</label>
+                    <label><input type="radio" name="q1" value="d"> г) На центральном сервере, принадлежащем создателям криптовалюты.</label>
+                </div>
+                <div class="feedback" id="feedback-q1"></div>
+            </div>
+             <div class="question-block" id="q2">
+                <p class="question-text">2. Какая аналогия из лекции лучше всего описывает функцию закрытого (приватного) ключа?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> а) Номер паспорта, который идентифицирует вас.</label>
+                    <label><input type="radio" name="q2" value="b"> б) Стеклянная банковская ячейка.</label>
+                    <label><input type="radio" name="q2" value="c"> в) Уникальная королевская печать ("колотушка"), которой вы ставите оттиск на приказах.</label>
+                    <label><input type="radio" name="q2" value="d"> г) Логин и пароль от вашего личного кабинета.</label>
+                </div>
+                <div class="feedback" id="feedback-q2"></div>
+            </div>
+            <div class="question-block" id="q3">
+                <p class="question-text">3. Что такое сид-фраза (12 или 24 слова)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> а) Пароль для входа в приложение кошелька.</label>
+                    <label><input type="radio" name="q3" value="b"> б) Набор слов для шифрования каждой отдельной транзакции.</label>
+                    <label><input type="radio" name="q3" value="c"> в) "Чертеж" или мастер-ключ, позволяющий восстановить доступ ко всем вашим средствам на любом устройстве.</label>
+                    <label><input type="radio" name="q3" value="d"> г) Имя вашего кошелька, которое видят другие пользователи.</label>
+                </div>
+                <div class="feedback" id="feedback-q3"></div>
+            </div>
+            <div class="question-block" id="q4">
+                <p class="question-text">4. Какая ситуация описывается фразой "кто первый успел, того и тапки"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> а) Когда два майнера одновременно находят блок.</label>
+                    <label><input type="radio" name="q4" value="b"> б) Когда ваш закрытый ключ или сид-фраза становятся известны кому-то еще.</label>
+                    <label><input type="radio" name="q4" value="c"> в) Когда вы пытаетесь купить популярный NFT на распродаже.</label>
+                    <label><input type="radio" name="q4" value="d"> г) Когда вы теряете доступ к своему кошельку.</label>
+                </div>
+                <div class="feedback" id="feedback-q4"></div>
+            </div>
+            <div class="question-block" id="q5">
+                <p class="question-text">5. Для чего, согласно аналогии "Кошелька и Сейфа", лучше всего использовать "холодный" (аппаратный) кошелек?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> а) Для частых ежедневных переводов и операций.</label>
+                    <label><input type="radio" name="q5" value="b"> б) Для долгосрочного и безопасного хранения основной части капитала.</label>
+                    <label><input type="radio" name="q5" value="c"> в) Для торговли на криптовалютных биржах.</label>
+                    <label><input type="radio" name="q5" value="d"> г) Для первоначального создания кошелька, после чего он больше не нужен.</label>
+                </div>
+                <div class="feedback" id="feedback-q5"></div>
+            </div>
+            <div class="question-block" id="q6">
+                <p class="question-text">6. Что означает золотое правило криптомира "Not your keys, not your coins"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> а) Если у вас нет монет, вам не нужны и ключи.</label>
+                    <label><input type="radio" name="q6" value="b"> б) Если вы не контролируете приватные ключи (например, храня деньги на бирже), вы не являетесь истинным владельцем монет.</label>
+                    <label><input type="radio" name="q6" value="c"> в) Нельзя использовать одни и те же ключи для разных монет.</label>
+                    <label><input type="radio" name="q6" value="d"> г) Покупать можно только те монеты, для которых у вас есть кошелек.</label>
+                </div>
+                <div class="feedback" id="feedback-q6"></div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="checkAnswers()">Проверить ответы</button>
+            <div id="results" style="display: none;"></div>
+        </form>
+    </div>
+
+    <!-- Уникальные данные для этой викторины -->
+    <script>
+        const correctAnswers = {
+            q1: 'c', q2: 'c', q3: 'c', q4: 'b', q5: 'b', q6: 'b'
+        };
+
+        const explanations = {
+            q1: 'Верно. Кошелек ничего не хранит. Ваши монеты — это всего лишь записи в децентрализованном реестре (блокчейне). Кошелек — это лишь ключ доступа к этим записям.',
+            q2: 'Верно. Аналогия с "колотушкой", которая ставит уникальный "оттиск" (цифровую подпись), идеально объясняет функцию приватного ключа: доказать, что команду на перевод отдали именно вы.',
+            q3: 'Верно. Сид-фраза — это человекочитаемая форма вашего главного приватного ключа. Зная ее, можно "воссоздать" вашу "колотушку" на любом устройстве и получить доступ к средствам.',
+            q4: 'Верно. Если кто-то украл ваш ключ, он становится таким же полноправным владельцем. Начинается гонка за то, кто первым выведет активы.',
+            q5: 'Верно. Холодный кошелек — это ваш "сейф". Он обеспечивает максимальный уровень безопасности, так как ключ никогда не соприкасается с интернетом напрямую.',
+            q6: 'Верно. Это фундаментальный принцип. Храня средства на кастодиальном сервисе (бирже), вы доверяете ему свои ключи. Истинный суверенитет над активами есть только тогда, когда вы и только вы контролируете сид-фразу.'
+        };
+    </script>
+    <!-- Подключаем общий файл скрипта -->
+    <script src="../assets/js/quiz-script.js"></script>
+</body>
+</html>
