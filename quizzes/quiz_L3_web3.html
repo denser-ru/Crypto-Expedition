@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина 3: Карта криптомира</title>
+    <!-- Подключаем общий файл стилей -->
+    <link rel="stylesheet" href="../assets/css/quiz-styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Итоговая викторина к Лекции 3: Карта криптомира</h1>
+
+        <form id="quizForm">
+            <!-- Вопрос 1 -->
+            <div class="question-block" id="q1">
+                <p class="question-text">1. Какое из этих утверждений лучше всего описывает "Великое противоречие Биткойна", о котором говорилось в лекции?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> а) Он одновременно является и товаром, и валютой.</label>
+                    <label><input type="radio" name="q1" value="b"> б) Его протокол математически стабилен и предсказуем, но его рыночная цена крайне волатильна.</label>
+                    <label><input type="radio" name="q1" value="c"> в) Он требует огромного количества энергии, но при этом является цифровым.</label>
+                    <label><input type="radio" name="q1" value="d"> г) Его создатель анонимен, но сам блокчейн полностью прозрачен.</label>
+                </div>
+                <div class="feedback" id="feedback-q1"></div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-block" id="q2">
+                <p class="question-text">2. Какая аналогия была использована для объяснения разницы между Биткойном и Эфириумом?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> а) "Золото" против "Нефти".</label>
+                    <label><input type="radio" name="q2" value="b"> б) "Простой калькулятор" против "Смартфона с AppStore".</label>
+                    <label><input type="radio" name="q2" value="c"> в) "Крепость" против "Открытого города".</label>
+                    <label><input type="radio" name="q2" value="d"> г) "Банковский сейф" против "Торгового автомата".</label>
+                </div>
+                <div class="feedback" id="feedback-q2"></div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-block" id="q3">
+                <p class="question-text">3. В чем фундаментальное различие между механизмами консенсуса Proof-of-Work (PoW) и Proof-of-Stake (PoS)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> а) PoW используют майнеры, а PoS — обычные пользователи.</label>
+                    <label><input type="radio" name="q3" value="b"> б) PoW обеспечивает безопасность сети за счет затраченной энергии ("трудом"), а PoS — за счет замороженного капитала ("долей").</label>
+                    <label><input type="radio" name="q3" value="c"> в) PoW используется для Биткойна, а PoS — только для стейблкоинов.</label>
+                    <label><input type="radio" name="q3" value="d"> г) В PoW блоки создаются каждые 10 минут, а в PoS — раз в час.</label>
+                </div>
+                <div class="feedback" id="feedback-q3"></div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-block" id="q4">
+                <p class="question-text">4. Процесс стейкинга в лекции сравнивался с:</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> а) Покупкой акций компании.</label>
+                    <label><input type="radio" name="q4" value="b"> б) Участием в лотерее.</label>
+                    <label><input type="radio" name="q4" value="c"> в) Банковским депозитом под проценты.</label>
+                    <label><input type="radio" name="q4" value="d"> г) Арендой компьютерной мощности.</label>
+                </div>
+                <div class="feedback" id="feedback-q4"></div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-block" id="q5">
+                <p class="question-text">5. Вы отправляете токен USDT в сети Ethereum. В какой валюте вы заплатите комиссию за транзакцию ("газ")?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> а) В USDT, так как вы отправляете именно его.</label>
+                    <label><input type="radio" name="q5" value="b"> б) В Биткойнах (BTC), так как это главная криптовалюта.</label>
+                    <label><input type="radio" name="q5" value="c"> в) В долларах США, так как USDT привязан к доллару.</label>
+                    <label><input type="radio" name="q5" value="d"> г) В Эфире (ETH), так как это нативная монета сети, в которой происходит операция.</label>
+                </div>
+                <div class="feedback" id="feedback-q5"></div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-block" id="q6">
+                <p class="question-text">6. Что такое DAO (Децентрализованная автономная организация)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> а) Специальный тип криптовалютного кошелька.</label>
+                    <label><input type="radio" name="q6" value="b"> б) "Компания, чей устав написан в виде кода", управляемая через голосования владельцев токенов.</label>
+                    <label><input type="radio" name="q6" value="c"> в) Алгоритм для борьбы с мошенничеством на биржах.</label>
+                    <label><input type="radio" name="q6" value="d"> г) Новый стандарт для создания NFT.</label>
+                </div>
+                <div class="feedback" id="feedback-q6"></div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-block" id="q7">
+                <p class="question-text">7. Что означает термин "сделать 10 иксов" на языке крипто-трейдеров?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a"> а) Провести 10 успешных сделок подряд.</label>
+                    <label><input type="radio" name="q7" value="b"> б) Увеличить свои первоначальные вложения в 10 раз.</label>
+                    <label><input type="radio" name="q7" value="c"> в) Купить 10 разных альткоинов.</label>
+                    <label><input type="radio" name="q7" value="d"> г) Пройти верификацию на 10 разных биржах.</label>
+                </div>
+                <div class="feedback" id="feedback-q7"></div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="checkAnswers()">Проверить ответы</button>
+            <div id="results" style="display: none;"></div>
+        </form>
+    </div>
+
+    <!-- Уникальные данные для этой викторины -->
+    <script>
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'b',
+            q4: 'c',
+            q5: 'd',
+            q6: 'b',
+            q7: 'b'
+        };
+
+        const explanations = {
+            q1: 'Верно. Протокол Биткойна стабилен как часы, но его цена на рынке крайне волатильна из-за психологии и спекуляций.',
+            q2: 'Верно. Биткойн сравнивался с калькулятором (одна задача, но идеально), а Эфириум — со смартфоном (платформа для разных приложений-смарт-контрактов).',
+            q3: 'Верно. PoW доказывает "работу" через затраты энергии, а PoS доказывает "долю" через экономический залог (стейк).',
+            q4: 'Верно. Вы "замораживаете" монеты для поддержки сети и получаете за это вознаграждение, что очень похоже на банковский депозит.',
+            q5: 'Верно. Токены — "гости" в сети, и за любые действия с ними нужно платить "хозяину" в его нативной валюте (ETH для Ethereum).',
+            q6: 'Верно. DAO использует смарт-контракты для создания организаций, управляемых коллективно через голосования.',
+            q7: 'Верно. "Иксы" — это множитель, язык спекулянтов, обозначающий кратный рост инвестиций.'
+        };
+    </script>
+    
+    <!-- Подключаем общий файл скрипта -->
+    <script src="../assets/js/quiz-script.js"></script>
+</body>
+</html>
